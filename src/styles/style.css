@@ -1,22 +1,48 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Madimi+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Madimi+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap');
 
 
 :root {
-    --color-primary-1: #6cb469;
-    --color-primary-2: #3d8d55;
+    --color-001: #35ace8;
+    --color-002: #35b5aa;
 
-    --color-secondary-1: #e6dfdf;
-    --color-secondary-2: #c8cfc9;
-    --color-secondary-3: #1f3827;
+    --color-003: #e3f1ef;
+    --color-004: #b8ece0;
+    --color-005: #1f3827;
+
+    --font01:  'Anton';
+    --font02:  'Bebas Neue';
+    --font03:  'Madimi One';
+    --font04:  'Roboto Mono';
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.title {
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    background-color: #1f3827;
+    width: 100vw;
+    padding: 60px;
+    margin: auto;
+    background-image: url(../images/seguranca.jpg);
+    background-position: center center;
     
-    
+}
+
+.title h1 {
+    font-family: var(--font02);
+    font-size: 3em;
+    color: var(--color-003);
+    text-shadow: 0px 0px 10px var(--color-005);
+
 }
 
 body {
@@ -24,11 +50,12 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    font-family: 'Roboto Mono', monospace;
-    background-color: var(--color-primary-2);
+    font-family: var(--font01);
+    background-color: var(--color-002);
     font-size: 16px;
     
 }
+
 
 #container {
     display: flex;
@@ -39,13 +66,15 @@ body {
 }
 
 #password_img {
-    width: 100px;
+    width: 150px;
+    padding-top: 50px;
 }
 
 #title {
     color: black;
     font-weight: 500;
     margin-bottom: 10px;
+    font-family: var(--font01);
 
 }
 
@@ -55,7 +84,7 @@ body {
     display: none;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-secondary-2);
+    background-color: var(--color-004);
     color: black;
     border-radius: 5px;
     padding: 8px 18px;
@@ -75,7 +104,7 @@ body {
 #copy {
     background-color: transparent;
     border: none;
-    color: var(--color-primary-1);
+    color: var(--color-001);
     height: 25px;
     width: 30px;
     font-size: 16px;
@@ -84,7 +113,7 @@ body {
 }
 
 #copy:hover {
-    color: var(--color-primary-2);
+    color: var(--color-002);
 
 }
 
@@ -94,14 +123,18 @@ body {
     gap: 12px;
     border-radius: 5px;
     width: 400px;
-    background-color: var(--color-secondary-2);
+    color: var(--color-003);
+    text-shadow: 0px 0px 3px var(--color-005);
     padding: 18px;
+    background-image: url(../images/deppmind.jpg);
+    background-position: right center;
 
 }
 
 .item {
     display: flex;
     gap: 14px;
+    
 
 }
 
@@ -115,11 +148,11 @@ body {
 }
 
 #size:focus {
-    outline: 2px solid var(--color-primary-1);
+    outline: 2px solid var(--color-003);
 }
 
 #generate {
-    background-color: var(--color-primary-1);
+    background-color: var(--color-003);
     border: none;
     margin-top: 12px;
     padding: 10px 0px;
@@ -132,7 +165,7 @@ body {
 }
 
 #generate:hover {
-    background-color: var(--color-primary-2);
+    background-color: var(--color-002);
 
 }
 
