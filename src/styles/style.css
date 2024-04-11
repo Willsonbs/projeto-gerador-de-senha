@@ -1,7 +1,8 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Madimi+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Madimi+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Madimi+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 
 
 :root {
@@ -11,11 +12,12 @@
     --color-003: #e3f1ef;
     --color-004: #b8ece0;
     --color-005: #1f3827;
+    --color-006: #000000;
 
     --font01:  'Anton';
     --font02:  'Bebas Neue';
-    --font03:  'Madimi One';
-    --font04:  'Roboto Mono';
+    --font03:  'Ubuntu';
+   
 }
 
 * {
@@ -69,6 +71,54 @@ body {
     width: 150px;
     padding-top: 50px;
 }
+
+a {
+    position: relative;
+    color: var(--color-006);
+    font-size: inherit;
+}
+
+a:after {
+    position: absolute;
+    width: 20em;
+    background-color: var(--color-003);
+    content: attr(data-tip);
+    padding: 1em;
+    color: var(--color-006);
+    margin: auto;
+    left: -1.5em;
+    right: 0;
+    bottom: 8em;
+    text-align: center;
+    border-radius: 0.2em;
+    font-family: var(--font03);
+
+}
+
+a:before {
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    top: +3.5em;
+    right: +4.4em;
+    border-top: 0.5em solid var(--color-003);
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    margin: auto;
+}
+
+
+a:after,
+a:before {
+    display: none;
+}
+
+a:hover:after,
+a:hover:before {
+    display: block;
+}
+
 
 #title {
     color: black;
@@ -165,7 +215,7 @@ body {
 }
 
 #generate:hover {
-    background-color: var(--color-002);
+    background-color: var(--color-003);
 
 }
 
