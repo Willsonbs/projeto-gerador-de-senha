@@ -138,6 +138,7 @@ a:hover:before {
     color: black;
     border-radius: 5px;
     padding: 8px 18px;
+    font-family: var(--font03);
 
 }
 
